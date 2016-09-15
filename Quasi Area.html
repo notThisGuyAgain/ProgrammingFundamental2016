@@ -1,0 +1,21 @@
+<script>
+var area = 0;
+var sides = parseInt(prompt("Enter number of sides!","4"));
+var side = [];
+
+for(x = 0; x < sides; x++)
+{
+  side[x] = parseInt(prompt("Enter side number " + (x + 1) + "!"));
+  document.write("Side " + (x + 1) + " is registered as " + side[x] + "<br>");
+  if(x <= 0)
+  {
+    area += side[x];
+  }
+  else
+  {
+    area = area * side[x];
+  }
+}
+
+document.write("The area is " + area + ".");
+</script>

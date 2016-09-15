@@ -1,0 +1,30 @@
+<script>
+//Generates random 6-sided die values for craps.
+var dice1 = Math.floor((Math.random()*6)+1);
+var dice2 = Math.floor((Math.random()*6)+1);
+
+//Sums up the dice values for easy use.
+var sum = dice1 + dice2;
+
+//Outputs text to display to the user what they have rolled.
+document.write("You have rolled a " + sum + "!<br>");
+document.write("The individual die results were " + dice1 + " & " + dice2 +"!<br><br>");
+
+//A switch statement is used here to interpret the craps rules, (assuming this is a Come Out roll)
+/*A switch statement checks if the sum is equal to any particular case, and if so, executes that case's block of code
+Unlike an if-else statement, blocks of code are not separated from each other and will keep executing block after block until told to stop
+Using this, I haven't written anything for certain blocks of code to have them continue on to the next block.
+I haven't written anything for some case either, and if a case isn't declared, no code will be executed by the switch statement.*/
+switch(sum)
+{
+  case 2:
+  case 3:
+  case 12:
+    document.write("Oh no! You have crapped out!");
+    break;
+  case 7:
+  case 11:
+    document.write("Great! You rolled a natural!");
+    break;
+}
+</script>
